@@ -1,0 +1,29 @@
+.container {
+    text-align:center;
+    background-color: rgba(150,150,150,0.2)
+}
+.line {
+    border-right: 1px solid rgba(168, 155, 155, 0.5);
+    width: 1000px;
+}
+
+
+.header-text>p {
+    background-color: rgb(241, 198, 119);
+    height:5px
+}
+
+
+.header-text {
+    border-bottom: 2px solid black;
+    
+}
+
+.header-text >h2{
+    font-size: 30px;
+    font-family: serif;
+}
+
+.contents-header {
+    padding: 10px;
+}
