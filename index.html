@@ -1,50 +1,119 @@
 <!DOCTYPE html>
 <html>
+  <style type="text/css">
+    #photo {
+        width: 700px;
+        height: 300px;
+        margin: 0 auto;
+        text-align: left;
+        overflow: hidden;
+        position: relative;
+        right:150px;
+        background-size: cover;
+    }
+    
+    #photo img {
+        top: 0;
+        left: 0;
+        position: absolute;
+    }
+    </style>
+    
+    
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+    $(function(){
+        var setImg = '#photo';
+        var fadeSpeed = 1600;
+        var switchDelay = 5000;
+    
+        $(setImg).children('img').css({opacity:'0'});
+        $(setImg + ' img:first').stop().animate({opacity:'1',zIndex:'20'},fadeSpeed);
+    
+        setInterval(function(){
+            $(setImg + ' :first-child').animate({opacity:'0'},fadeSpeed).next('img').animate({opacity:'1'},fadeSpeed).end().appendTo(setImg);
+        },switchDelay);
+    });
+    </script>
+    
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ポートフォリオ</title>
     <link rel="stylesheet" href="portfolio.css">
     <link rel='stylesheet' href='responsive.css'>
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
   </head>
-  <body> 
+  <body>
       <header>
-          <div class="header-text">
-            <p></p>
-            <h2>自己紹介ページです。</h2>
-          </div>
+        <div>
+          <a href="#" class="btn facebook">
+            <span><i class="fab fa-facebook"></i>いいね！</span>
+            
+          </a>
+          <a href="#" class="btn twitter">
+            
+            <span><i class="fab fa-twitter"></i>ツイート</span>
+          </a>
+        </div>
+        <div class="anchor-container">
+          <h5 class="anhcor-header">クリックした行に移動します。</h5>
+          <a class="anhcor" href="#index1">大型冷凍庫管理人</a>
+          <a class="anhcor" href="#index2">電気会社技術作業員</a>
+          <a class="anhcor" href="#index3">副業としての実務と転職の経緯</a>
+          <a class="anhcor" href="#index4">グラフ</a>
+        </div>
+        <div class="header-text">
+          <img src="ロゴ.png"></img>
+          <div id="photo">
+          <img class="egg" src="75139761_p0_square1200.jpg">
+          <img  class="fig" src="70400863_p0_master1200.jpg" width="550px" height="300">
+          <img  class="fig" src="73484707_p0_master1200.jpg" width="550px" height="300">
+          <img class="fig" src="70465402_p0.png" width="550" height="300px">
+        </div>
+        <div>  
+          <span class="google"><br><br>広告閉じた時風な<br>フェイク窓です。</span>
         </div>
       </header>
-    <div class="line">
-      <div class="main-wrapper">
-        <div class='container'>
-          <h1 class="contents-header">ありきたりではありますが<br>このページに記載してある自己紹介をポートフォリオとさせて頂きます。</h1>
-          <h2>初めまして、私は稲荷山 大地と申します。</h2>
-          <a class="fake"></a>
-          <p>何が出来るかの証明をするには作ったものを見せるのが手っ取り早いと耳に挟み、作りました。</p>
-          <p>学歴や職務経歴等別紙にてお伝えしているかと思いますので大筋は割愛し、それの詳細とプログラマーへ転向しようと思った経緯を綴っていきます。</p>
-          <h2>プログラマーになろうと思った経緯</h2>
-          <p>暫くの間(2019年春迄)力仕事をしていましたが、背骨や腰を痛め退職。</p>　
-          <p>体を痛め、今後同じことがあったらを想像。恐怖心から職務続行不可能を悟った段階で大いに焦り、<br>
-            知人の紹介で今の会社に勤務。(この時には体は治りました)</p>
-          <p>紹介先の会社は簡単に怪我をする環境ではありませんでしたが、万が一また怪我をした時を考え、<br>
-            食い扶持の確保目的で、2018年から趣味で始めていたプログラミングを、実務として使える様に意識と行動をシフト。<br>
-            具体的には副業としてpython言語を使った案件をこなして賃金を得ていました。</p>
-　　　　   <p>内容は、表データ等に自動で落とし込むスクレイピングツール作成、同言語の雇われオンライン講師をやっていました。</p>
-          <p>しかしそれだけでは食い扶持と言える迄の賃金を得ることは叶わなかったので2019年頃からhtml,css,php,javascript(ES6)を学び、<br>
-            それらでも収入を得るようになりました。(JSに関しては実用経験無し)</p>
-          <p>具体的にはHP制作とカスタマイズを主に行っていました。</p>
-          <p>2021年のはじめには、特に案件が無くとも暇な時、PCを触れない時でも(勤務中等)、<br>
-            自然と想像でコーディングやスクリプトを組んでいた事に気付き好きなんだと思い職の切り替えを意識。</p>
-          <P>現在に至ります。</P>
-          <h2>以下、言語毎の勉強時間と実務時間のグラフになります。</h2>
+      <div class="line">
+        <div class="main-wrapper">
+          <div class='container'>
+            <p>絵を書くのが好きです。</p>
+            <h2 class="header-header">初めまして、私は稲荷山 大地と申します。</h2>
+            <a class="fake"></a>
+            <p>以下に職務経歴の詳細と業種変更した経緯、<br>プログラムを用いた業務経験年数、<br>学習経験年数を綴っていきます。</p>
+            <div class="career1">
+              <h3 class="business">職歴詳細と業種変更への経緯</h3>
+              <h4 class="career-header1" id="index1">大型冷凍庫管理人</h4>
+              <h4 class="subcareer-header">学校を卒業して暫くの間、大きい冷凍庫の雇われ倉庫番をしていました。</h4>
+              <p>入出庫の依頼があったときは大型トラックが冷凍庫にやってきて、<br>氷漬けにされた海産物(一個当たり約20kg)をトラックに連結されたコンテナから<br>手作業で運び出し冷凍庫に入れます。これが主な仕事でした。</p>　
+            　<p class="spacing3">とある日業務中に背骨、腰を痛め、今後同じ規模の怪我やそれ以上があったらを想像。<br>恐怖心から職務続行不可能を悟り大いに焦り、<br>
+                知人の紹介で今の会社に勤務。(この時には体は治りました)</p>
+              <h3 class="career-header2" id="index2">電気会社技術作業員</h3>
+              <h4 class="subcareer-header">公共インフラの保守点検を行っていました。</h4>
+              <p>町に点在する気象観測装置、浄水場、道路情報板の保守点検業務になります。</p>
+              <p class="text-spasing">電柱に登ったり高電圧に近づく事は日常的にありましたが、<br>簡単に怪我をする環境ではありませんでした。</p>
+              <p>しかし万が一また怪我をした時を考え食い扶持の確保目的で、<br>2018年から趣味で始めていたプログラミングを、<br>実務として使える様に意識と行動をシフト。</p>
+              <p class="career2-bottom">副業としてpython言語を使った案件をこなして賃金を得ていました。</p>
+              <h4 class="career-header3" id="index3">副業としての実務と転職の経緯</h4>
+              <h4 class="subcareer-header">表データ等に自動で落とし込むスクレイピングツール作成、<br>同言語の雇われオンライン講師、HP作成をやっていました。</h4>
+              <p class="text-spasing">当初python言語しか使えずツールであれアプリであれ作れる範囲も狭く、<br>食い扶持と言える迄の賃金を得ることは叶わなかったので、<br>2019年頃からhtml,css,php,javascript(ES6)を学び、<br>
+                それらでも収入を得るようになりました。(JSに関しては実務経験無し)</p>
+              <p class="text-spasing2">具体的にはHP制作とカスタマイズを主に行っていました。</p>
+              <p>2021年のはじめには特に案件が無くとも暇な時、PCを触れない時でも(勤務中等)、<br>
+                自然と想像でコーディングやスクリプトを組んでいた事に気付き、<br>好きなんだと思い職の切り替えを意識。</p>
+              <P>現在に至ります。</P>
+            </div>
+            <div>
+              <h4 class="career-header3" id="index4">以下、言語毎の学習時間と実務時間のグラフになります。</h4>
+              <img class="graph" src="Figure_2.png">
+            </div>
+          </div>
         </div>
-      </div>
       <footer>
         <div class = 'container'>
-          <h3>以上を以て簡単ですが自己紹介を終わります。</h3>
+          <h3>以上を以て簡単ですがポートフォリオ兼経歴詳細を終了します。</h3>
         </div>
       </footer>
-    </div>
   </body>
 </html>
